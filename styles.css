@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Boldonse&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   --primary-color: #ff6a3d;
   --secondary-color: #ff6a3d;
@@ -152,10 +153,8 @@ nav {
 }
 
 .header {
-  
   position: relative;
   height: 100vh;
-  
 }
 
 .header::before {
@@ -173,17 +172,17 @@ nav {
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 1rem;
+  padding: min(1rem, 8%);
 }
 
 .section__header {
   margin-bottom: 1rem;
   font-size: 3rem;
   font-weight: 500;
-
   font-family: var(--header-font);
   color: var(--black);
 }
+
 .section__subheader {
   position: relative;
   isolation: isolate;
@@ -202,12 +201,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 5rem;
-  max-width: var(--max-width);
 }
 
 .header__content {
-  max-width: 700px;
-  max-height: 700px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -228,14 +224,11 @@ nav {
 }
 
 .header__images {
-  max-height: 700px;
-  overflow: hidden;
-  display: flex;
-  flex: 1;
+  height:auto;
   object-fit: cover;
 }
 .header__images img {
-  max-width: 1000px;
+  max-width: 90rem;
 }
 
 .about {
@@ -332,7 +325,7 @@ nav {
 }
 
 .footer__links a:hover {
-  color: var(--secondary-color);
+  color: var(--black);
 }
 
 .footer__bar {
@@ -367,11 +360,9 @@ nav {
 
   .header__container {
     height: calc(100% - 10rem);
+   
   }
 
-  .header__socials {
-    display: flex;
-  }
 
   .about__container {
     grid-template-columns: repeat(2, 1fr);
@@ -394,4 +385,34 @@ nav {
   .footer__container {
     grid-template-columns: 2fr 1fr 1fr;
   }
+
+  
+}
+
+@media (max-width : 768px){
+  .header{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__container{
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  .section__container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__images{
+    max-height: 100rem;
+    object-fit: cover;
+    max-width: 9rem;
+    overflow: hidden;    
+    
+  }
+
+ 
 }
