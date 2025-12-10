@@ -407,10 +407,10 @@ nav {
   }
 
   .header__images{
-    max-height: 100rem;
+    max-height: 90rem;
     object-fit: cover;
-    max-width: 9rem;
-    overflow: hidden;    
+    max-width: 6rem;
+       
     
   }
 
